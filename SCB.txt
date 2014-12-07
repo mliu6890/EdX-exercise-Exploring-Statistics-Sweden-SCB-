@@ -1,0 +1,346 @@
+
+R version 3.1.2 (2014-10-31) -- "Pumpkin Helmet"
+Copyright (C) 2014 The R Foundation for Statistical Computing
+Platform: x86_64-apple-darwin10.8.0 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+During startup - Warning messages:
+1: Setting LC_CTYPE failed, using "C" 
+2: Setting LC_COLLATE failed, using "C" 
+3: Setting LC_TIME failed, using "C" 
+4: Setting LC_MESSAGES failed, using "C" 
+5: Setting LC_MONETARY failed, using "C" 
+[R.app GUI 1.65 (6833) x86_64-apple-darwin10.8.0]
+
+WARNING: You're using a non-UTF8 locale, therefore only ASCII characters will work.
+Please read R for Mac OS X FAQ (see Help) section 9 and adjust your system preferences accordingly.
+[History restored from /Users/mliu6890/.Rapp.history]
+
+> user.name()
+Error: could not find function "user.name"
+> name()
+Error: could not find function "name"
+> library(sweSCB)
+Loading required package: pxweb
+pxweb: R tools for PX-WEB API.
+Copyright (C) 2014 Mans Magnusson, Leo Lahti, Love Hansson
+https://github.com/ropengov/pxweb
+
+> a<- find_scb_data()
+
+CHOOSE API:
+=========================================================================================================
+1. [api.scb.se]        Statistics Sweden
+2. [pxnet2.stat.fi]    Statistics Finland
+3. [pxwebapi2.stat.fi] Statistics Finland (old version)
+4. [statistik.sjv.se]  The Swedish agricultural authority
+5. [pxweb.orebro.se]   Open data from the municipality Orebro in Sweden.
+
+Choose api by number:
+('esc' = Quit) 
+1: 1
+
+CHOOSE API:
+=========================================================================================================
+1. [1] en
+2. [2] sv
+
+Choose api by number:
+('esc' = Quit) 
+1: 1
+Content of 'api.scb.se' at current (1) node level:
+=========================================================================================================
+1.  [BE] Population
+2.  [FM] Financial markets
+3.  [HE] Household finances
+4.  [LE] Living conditions
+5.  [MI] Environment
+6.  [NV] Business activities
+7.  [PR] Prices and Consumption
+8.  [UF] Education and research
+9.  [AM] Labour market
+10. [BO] Housing, construction and building
+11. [HA] Trade in goods and services
+12. [JO] Agriculture, forestry and fishery
+13. [ME] Democracy
+14. [NR] National accounts
+15. [OE] Public finances
+16. [TK] Transport and communications
+
+Enter the data (number) you want to explore:
+('esc' = Quit, 'b' = Back) 
+1: 4
+Content of 'api.scb.se' at current (2) node level:
+=========================================================================================================
+1. [LE0102] Children and their Families
+2. [LE0101] Living Conditions Surveys
+3. [LE0106] Living Conditions Survey of Children
+
+Enter the data (number) you want to explore:
+('esc' = Quit, 'b' = Back) 
+1: 1
+Content of 'api.scb.se' at current (3) node level:
+=========================================================================================================
+1.  [LE0102L] Families with children finances
+2.  [LE0102A] Children living at home and children not living at home
+3.  [LE0102B] Family type and parents form of cohabitation
+4.  [LE0102J] Families
+5.  [LE0102C] Number of siblings
+6.  [LE0102I] Adopted children
+7.  [LE0102D] Joint and sole custody
+8.  [LE0102E] Cohabitating young persons and their children
+9.  [LE0102F] Separations between parents
+10. [LE0102G] Geographic distance between children and parents
+11. [LE0102K] parents occupation
+
+Enter the data (number) you want to explore:
+('esc' = Quit, 'b' = Back) 
+1: 5
+Content of 'api.scb.se' at current (4) node level:
+=========================================================================================================
+1. [Syskon7] Children and young persons aged 0-21 by sex, age, siblings and Swedish/foreign background.
+             Year 2000 - 2013
+2. [Syskon3] Children and young persons aged 0-21 by sex, age, type of family (married/cohabiting or
+             single parents), siblings and Swedish/foreign background. Year 2000 - 2013
+
+Enter the data (number) you want to explore:
+('esc' = Quit, 'b' = Back) 
+1: 1
+Do you want to download 'http://api.scb.se/OV0104/v1/doris/en/ssd/LE/LE0102/LE0102C/Syskon7'?
+('esc' = Quit, 'y' = Yes, 'n' = No) 
+1: y
+Do you want to clean and melt this file (to wide R format)?
+('esc' = Quit, 'y' = Yes, 'n' = No) 
+1: y
+Do you want to print the code for downloading this data?
+('esc' = Quit, 'y' = Yes, 'n' = No) 
+1: y
+
+ALTERNATIVES FOR VARIABLE: SEX 
+=========================================================================================================
+1. [5+6] boys and girls
+2. [5]   boys
+3. [6]   girls
+
+Choose your alternative(s) by number:
+Separate multiple choices by ',' and intervals by ':'
+('esc' = Quit, '*' = Select all, 'a' = Show all) 
+1: 1
+
+ALTERNATIVES FOR VARIABLE: AGE 
+=========================================================================================================
+1.  [0]    0 years
+2.  [1]    1 year
+3.  [2]    2 years
+4.  [3]    3 years
+5.  [4]    4 years
+
+20. [19]   19 years
+21. [20]   20 years
+22. [21]   21 years
+23. [0-17] 0-17 years
+24. [0-21] 0-21 years
+
+Choose your alternative(s) by number:
+Separate multiple choices by ',' and intervals by ':'
+('esc' = Quit, '*' = Select all, 'a' = Show all) 
+1: *
+
+ALTERNATIVES FOR VARIABLE: SIBLINGS LIVING AT HOME 
+=========================================================================================================
+1. [0]  0
+2. [1]  1
+3. [2]  2
+4. [3]  3
+5. [4]  4
+6. [5]  5
+7. [6]  6
+8. [7+] 7+
+9. [99] number of siblings, information missing
+
+Choose your alternative(s) by number:
+Separate multiple choices by ',' and intervals by ':'
+('esc' = Quit, '*' = Select all, 'a' = Show all) 
+1: *
+
+ALTERNATIVES FOR VARIABLE: FOREIGN/SWEDISH BACKGROUND 
+=========================================================================================================
+1. [10] born in Sweden with two parents born in Sweden
+2. [20] born in Sweden with two foreign born parents
+3. [30] born in Sweden with one parent born in Sweden and one foreign born parent
+4. [40] born in Sweden, information missing
+5. [50] foreign born, biological children
+6. [60] foreign born, international adoption
+
+Choose your alternative(s) by number:
+Separate multiple choices by ',' and intervals by ':'
+('esc' = Quit, '*' = Select all, 'a' = Show all) 
+1: 1
+
+ALTERNATIVES FOR VARIABLE: OBSERVATIONS 
+=========================================================================================================
+1. [LE0102B5] Number
+2. [LE0102B6] Percent
+
+Choose your alternative(s) by number:
+Separate multiple choices by ',' and intervals by ':'
+('esc' = Quit, '*' = Select all, 'a' = Show all) 
+1: 1
+
+ALTERNATIVES FOR VARIABLE: YEAR 
+=========================================================================================================
+1.  [2000] 2000
+2.  [2001] 2001
+3.  [2002] 2002
+4.  [2003] 2003
+5.  [2004] 2004
+
+10. [2009] 2009
+11. [2010] 2010
+12. [2011] 2011
+13. [2012] 2012
+14. [2013] 2013
+
+Choose your alternative(s) by number:
+Separate multiple choices by ',' and intervals by ':'
+('esc' = Quit, '*' = Select all, 'a' = Show all) 
+1: *
+Downloading... Error in read.table(textConnection(a), sep = ",", header = TRUE, stringsAsFactors = FALSE) : 
+  more columns than column names
+> b
+Error: object 'b' not found
+> minData<-find_scb_data()
+
+CHOOSE API:
+=========================================================================================================
+1. [api.scb.se]        Statistics Sweden
+2. [pxnet2.stat.fi]    Statistics Finland
+3. [pxwebapi2.stat.fi] Statistics Finland (old version)
+4. [statistik.sjv.se]  The Swedish agricultural authority
+5. [pxweb.orebro.se]   Open data from the municipality Orebro in Sweden.
+
+Choose api by number:
+('esc' = Quit) 
+1: 1
+
+CHOOSE API:
+=========================================================================================================
+1. [1] en
+2. [2] sv
+
+Choose api by number:
+('esc' = Quit) 
+1: 1
+Content of 'api.scb.se' at current (1) node level:
+=========================================================================================================
+1.  [BE] Population
+2.  [FM] Financial markets
+3.  [HE] Household finances
+4.  [LE] Living conditions
+5.  [MI] Environment
+6.  [NV] Business activities
+7.  [PR] Prices and Consumption
+8.  [UF] Education and research
+9.  [AM] Labour market
+10. [BO] Housing, construction and building
+11. [HA] Trade in goods and services
+12. [JO] Agriculture, forestry and fishery
+13. [ME] Democracy
+14. [NR] National accounts
+15. [OE] Public finances
+16. [TK] Transport and communications
+
+Enter the data (number) you want to explore:
+('esc' = Quit, 'b' = Back) 
+1: 16
+Content of 'api.scb.se' at current (2) node level:
+=========================================================================================================
+1. [TK1001] Registered vehicles
+
+Enter the data (number) you want to explore:
+('esc' = Quit, 'b' = Back) 
+1: 1
+Content of 'api.scb.se' at current (3) node level:
+=========================================================================================================
+1. [TK1001S] Economic indicators
+
+Enter the data (number) you want to explore:
+('esc' = Quit, 'b' = Back) 
+1: 1
+Content of 'api.scb.se' at current (4) node level:
+=========================================================================================================
+1. [SnabbStatTK1001] New registrations of passenger cars, month 2013M12 - 2014M11
+
+Enter the data (number) you want to explore:
+('esc' = Quit, 'b' = Back) 
+1: 1
+Do you want to download 'http://api.scb.se/OV0104/v1/doris/en/ssd/TK/TK1001/TK1001S/SnabbStatTK1001'?
+('esc' = Quit, 'y' = Yes, 'n' = No) 
+1: y
+Do you want to clean and melt this file (to wide R format)?
+('esc' = Quit, 'y' = Yes, 'n' = No) 
+1: y
+Do you want to print the code for downloading this data?
+('esc' = Quit, 'y' = Yes, 'n' = No) 
+1: y
+
+ALTERNATIVES FOR VARIABLE: OBSERVATIONS 
+=========================================================================================================
+1. [TK1001AD] Change from selected month against previous month
+2. [TK1001AE] Change from selected month against the same month of previous year
+
+Choose your alternative(s) by number:
+Separate multiple choices by ',' and intervals by ':'
+('esc' = Quit, '*' = Select all, 'a' = Show all) 
+1: 2
+
+ALTERNATIVES FOR VARIABLE: MONTH 
+=========================================================================================================
+1.  [2013M12] 2013M12
+2.  [2014M01] 2014M01
+3.  [2014M02] 2014M02
+4.  [2014M03] 2014M03
+5.  [2014M04] 2014M04
+
+8.  [2014M07] 2014M07
+9.  [2014M08] 2014M08
+10. [2014M09] 2014M09
+11. [2014M10] 2014M10
+12. [2014M11] 2014M11
+
+Choose your alternative(s) by number:
+Separate multiple choices by ',' and intervals by ':'
+('esc' = Quit, '*' = Select all, 'a' = Show all) 
+1: *
+Downloading... Done.
+To download the same data again, use the following code:
+(save code using UTF-8 encoding)
+
+myDataSetName <- 
+  get_pxweb_data(url = "http://api.scb.se/OV0104/v1/doris/en/ssd/TK/TK1001/TK1001S/SnabbStatTK1001",
+             dims = list(ContentsCode = c('TK1001AE'),
+                         Tid = c('*')),
+             clean = TRUE)
+
+> str(minData)
+'data.frame':	12 obs. of  3 variables:
+ $ month       : Factor w/ 12 levels "2013M12","2014M01",..: 1 2 3 4 5 6 7 8 9 10 ...
+ $ observations: Factor w/ 1 level "Change from selected month against the same month of previous year": 1 1 1 1 1 1 1 1 1 1 ...
+ $ values      : num  -0.9 16.3 18.3 22.3 12.3 4.6 21.9 10.6 7.5 7.1 ...
+> boxplot(minData$values~minData$month)
+> boxplot(minData$values~minData$month, las=3)
+> plot(minData$values~minData$month, las=3)
+> ##The figure indicates the change in the number of registered vehicle in a month comparing to the same month last year. 
+starting httpd help server ... done
+> 
